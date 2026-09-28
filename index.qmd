@@ -7,7 +7,7 @@ author:
     affiliation-url: "https://www.ut.edu.co/"
 date: today
 lang: es
-title-block-banner: "#768561"
+title-block-banner: "#000000"
 
 format:
   html:
@@ -46,8 +46,8 @@ options(
 ```
 
 ```{=html}
-<div style="position:absolute; top:10px; right:10px;">
-<img src="Logo_ut.png" width="150">
+<div style="position:absolute; top:0px; right:0px;">
+<img src="Logo_ut.png" width="217">
 </div>
 ```
 
