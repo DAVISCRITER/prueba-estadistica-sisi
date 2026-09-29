@@ -15,9 +15,9 @@ format:
     fontsize: 14pt
     toc: true
     toc-location: right
-    number-sections: true
+    number-sections: false
     code-fold: true
-    code-summary: "Ver código"
+    code-summary: "  "
     theme: dark
     highlight-style: monokai
     html-math-method: katex
@@ -61,8 +61,6 @@ body{
 </style>
 ```
 
-# .Cargar paquetes
-
 ```{r}
 ipak <- function(pkg){
 
@@ -101,7 +99,6 @@ En el contexto de la **Administración Pública**, por ejemplo, pueden utilizars
 - Relación entre género y uso de servicios públicos.
 - Relación entre estrato socioeconómico y acceso a programas sociales.
 
-------------------------------------------------------------------------
 
 # Distribución de frecuencias unidimensional
 
@@ -119,14 +116,13 @@ un conjunto de $n$ observaciones de una variable estadística $X$.
 
 La distribución de frecuencias permite determinar cuántas observaciones corresponden a cada valor o categoría de la variable.
 
-------------------------------------------------------------------------
 
 ## Elementos de una distribución de frecuencias
 
 Una tabla de frecuencias puede contener las siguientes columnas:
 
 | Símbolo | Nombre | Interpretación |
-|:-------------:|--------------------|--------------------------------------|
+|:---------------:|-------------------|------------------------------------|
 | $x_i$ | Valor o categoría | Valor observado de la variable |
 | $f_i$ | Frecuencia absoluta | Número de veces que aparece $x_i$ |
 | $F_i$ | Frecuencia absoluta acumulada | Número de observaciones hasta $x_i$ |
@@ -134,7 +130,6 @@ Una tabla de frecuencias puede contener las siguientes columnas:
 | $H_i$ | Frecuencia relativa acumulada | Proporción acumulada hasta $x_i$ |
 | $%$ | Porcentaje | Frecuencia relativa expresada en porcentaje |
 
-------------------------------------------------------------------------
 
 # Frecuencia absoluta
 
@@ -167,7 +162,6 @@ table(tramites)
 
 La función `table()` permite obtener las frecuencias absolutas.
 
-------------------------------------------------------------------------
 
 # Frecuencia absoluta acumulada
 
@@ -213,7 +207,7 @@ freq_abs_acum
 
 La función `cumsum()` calcula sumas acumuladas.
 
-------------------------------------------------------------------------
+
 
 # Frecuencia relativa
 
@@ -251,7 +245,6 @@ $$
 p_i=0.25(100)=25\%
 $$
 
-------------------------------------------------------------------------
 
 # Frecuencia relativa acumulada
 
@@ -281,7 +274,6 @@ $$
 H_k=100\%
 $$
 
-------------------------------------------------------------------------
 
 # Tabla de frecuencias completa
 
@@ -294,7 +286,6 @@ Una tabla de frecuencias para una variable cuantitativa discreta puede estructur
 | $\vdots$ | $\vdots$ | $\vdots$ | $\vdots$ | $\vdots$ | $\vdots$ |
 |    $x_k$ |    $f_k$ |      $n$ |      $1$ |      $1$ |      100 |
 
-------------------------------------------------------------------------
 
 # Construcción de una tabla de frecuencias en R
 
@@ -330,7 +321,6 @@ frecuencias$Porcentaje <- round(
 frecuencias
 ```
 
-------------------------------------------------------------------------
 
 # Distribuciones de frecuencia para variables cualitativas
 
@@ -365,7 +355,6 @@ Y expresarse en porcentaje:
 round(prop.table(table(satisfaccion)) * 100, 2)
 ```
 
-------------------------------------------------------------------------
 
 # Representación gráfica de una distribución unidimensional
 
@@ -380,6 +369,7 @@ La elección del gráfico depende del tipo de variable.
 | Cuantitativa          | Polígono de frecuencias           |
 | Cuantitativa          | Ojiva para frecuencias acumuladas |
 
+
 ## Gráfico de barras
 
 ```{r}
@@ -387,18 +377,17 @@ library(ggplot2)
 
 ggplot(
   data.frame(satisfaccion),
-  aes(x = satisfaccion)
+  aes(x = satisfaccion, fill = satisfaccion)
 ) +
   geom_bar() +
   labs(
     title = "Nivel de satisfacción de los ciudadanos",
     x = "Nivel de satisfacción",
     y = "Frecuencia"
-  ) +
-  theme_minimal()
+  ) + scale_fill_manual(values = c("#812e94","#2d7ead","#cfcd57" ))
 ```
 
-------------------------------------------------------------------------
+
 
 # Distribución de frecuencias para datos agrupados
 
@@ -412,7 +401,6 @@ $$
 
 Cada intervalo contiene un conjunto de valores.
 
-------------------------------------------------------------------------
 
 ## Elementos de una distribución agrupada
 
@@ -437,7 +425,6 @@ donde:
 - $L_i$ = límite inferior.
 - $U_i$ = límite superior.
 
-------------------------------------------------------------------------
 
 # Número de intervalos
 
@@ -469,7 +456,6 @@ $$
 
 es el rango.
 
-------------------------------------------------------------------------
 
 # Ejemplo con datos cuantitativos
 
@@ -498,7 +484,6 @@ intervalos <- cut(
 table(intervalos)
 ```
 
-------------------------------------------------------------------------
 
 # Histograma
 
@@ -520,7 +505,6 @@ ggplot(
   theme_minimal()
 ```
 
-------------------------------------------------------------------------
 
 # Distribución de frecuencias bidimensional
 
@@ -546,7 +530,6 @@ Por ejemplo:
 - Modalidad de atención y satisfacción.
 - Género y tipo de servicio utilizado.
 
-------------------------------------------------------------------------
 
 # Tabla de contingencia
 
@@ -567,7 +550,6 @@ La tabla puede tener la siguiente estructura:
 
 Los valores $n_{ij}$ representan las **frecuencias conjuntas**.
 
-------------------------------------------------------------------------
 
 # Frecuencia conjunta
 
@@ -591,7 +573,6 @@ $$
 
 representaría el número de individuos pertenecientes a la categoría 2 de $X$ y a la categoría 3 de $Y$.
 
-------------------------------------------------------------------------
 
 # Frecuencias marginales
 
@@ -615,7 +596,6 @@ $$
 n=\sum_i\sum_j n_{ij}
 $$
 
-------------------------------------------------------------------------
 
 # Frecuencias relativas bidimensionales
 
@@ -637,7 +617,6 @@ $$
 p_{ij}=100h_{ij}
 $$
 
-------------------------------------------------------------------------
 
 # Frecuencias condicionales
 
@@ -659,7 +638,6 @@ $$
 
 Las frecuencias condicionales son fundamentales para estudiar posibles relaciones entre dos variables.
 
-------------------------------------------------------------------------
 
 # Ejemplo de tabla bidimensional en R
 
@@ -702,7 +680,6 @@ El resultado conceptual es:
 | Presencial |   30 |    15 |    5 |
 | Virtual    |   20 |    20 |   10 |
 
-------------------------------------------------------------------------
 
 # Totales marginales en R
 
@@ -728,7 +705,6 @@ margin.table(tabla, 2)
 
 obtiene las frecuencias marginales de las columnas.
 
-------------------------------------------------------------------------
 
 # Frecuencias relativas en R
 
@@ -744,7 +720,6 @@ Para obtener porcentajes:
 round(prop.table(tabla) * 100, 2)
 ```
 
-------------------------------------------------------------------------
 
 # Porcentajes por fila
 
@@ -762,7 +737,6 @@ round(prop.table(tabla, 1) * 100, 2)
 
 La opción `margin = 1` indica que los porcentajes se calculan **por fila**.
 
-------------------------------------------------------------------------
 
 # Porcentajes por columna
 
@@ -780,7 +754,6 @@ round(prop.table(tabla, 2) * 100, 2)
 
 La opción `margin = 2` indica que los porcentajes se calculan **por columna**.
 
-------------------------------------------------------------------------
 
 # Interpretación de una tabla bidimensional
 
@@ -814,7 +787,6 @@ Una interpretación estadística sería:
 
 Es importante distinguir este resultado de un porcentaje calculado sobre el total general de la muestra.
 
-------------------------------------------------------------------------
 
 # Visualización de una distribución bidimensional
 
@@ -857,7 +829,6 @@ ggplot(
   theme_minimal()
 ```
 
-------------------------------------------------------------------------
 
 # Gráfico de barras apiladas
 
@@ -881,7 +852,6 @@ ggplot(
   theme_minimal()
 ```
 
-------------------------------------------------------------------------
 
 # Barras proporcionales
 
@@ -912,7 +882,6 @@ ggplot(
 
 Este gráfico resulta especialmente útil cuando los tamaños de los grupos son diferentes.
 
-------------------------------------------------------------------------
 
 # Distribución bidimensional y asociación
 
@@ -932,7 +901,6 @@ Sin embargo, una diferencia descriptiva no significa necesariamente que exista u
 
 Para evaluar formalmente la asociación entre dos variables categóricas puede utilizarse, entre otras herramientas, la **prueba chi-cuadrado de independencia**.
 
-------------------------------------------------------------------------
 
 # Prueba chi-cuadrado en R
 
@@ -980,7 +948,6 @@ $$
 \alpha=0.05
 $$
 
-------------------------------------------------------------------------
 
 # Diferencia entre distribución unidimensional y bidimensional
 
@@ -996,7 +963,6 @@ $$
 | Asociación | No | Sí |
 | Chi-cuadrado | No necesariamente | Sí, para variables categóricas |
 
-------------------------------------------------------------------------
 
 # Funciones fundamentales de R
 
@@ -1017,7 +983,6 @@ Las siguientes funciones son especialmente útiles para trabajar con distribucio
 | `geom_histogram()` | Histograma                        |
 | `chisq.test()`     | Prueba chi-cuadrado               |
 
-------------------------------------------------------------------------
 
 # Función general para construir una tabla de frecuencias
 
@@ -1051,7 +1016,6 @@ Aplicación:
 tabla_frecuencias(satisfaccion)
 ```
 
-------------------------------------------------------------------------
 
 # Recomendaciones para el análisis estadístico
 
@@ -1068,7 +1032,6 @@ Al construir e interpretar una distribución de frecuencias es importante:
 9.  No confundir asociación descriptiva con causalidad.
 10. Cuando sea pertinente, complementar el análisis descriptivo con pruebas estadísticas.
 
-------------------------------------------------------------------------
 
 # Ejemplo aplicado a la Administración Pública
 
@@ -1094,7 +1057,6 @@ La primera pregunta utiliza una **distribución de frecuencias unidimensional**.
 
 La segunda utiliza una **distribución de frecuencias bidimensional**.
 
-------------------------------------------------------------------------
 
 # Flujo de trabajo recomendado en RStudio
 
@@ -1126,7 +1088,6 @@ Análisis de asociación
 Interpretación estadística
 ```
 
-------------------------------------------------------------------------
 
 # Conclusiones
 
@@ -1138,7 +1099,6 @@ En **R/RStudio**, funciones como `table()`, `prop.table()`, `cumsum()`, `xtabs()
 
 El análisis estadístico debe ir más allá de la construcción mecánica de tablas: es fundamental interpretar los resultados dentro del contexto de investigación y seleccionar correctamente los porcentajes, gráficos y procedimientos estadísticos de acuerdo con el tipo de variables estudiadas.
 
-------------------------------------------------------------------------
 
 # Resumen de fórmulas
 
