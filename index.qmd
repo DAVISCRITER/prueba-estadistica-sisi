@@ -2,7 +2,7 @@
 title: "DISTRIBUCIONES DE FRECUENCIAS"
 subtitle: "TALLER"
 author: 
-  - name: DAVISCRITER
+  - name: Jhojan Obando<br>Nicolas Moya
     affiliation: "Universidad del Tolima"
     affiliation-url: "https://www.ut.edu.co/"
 date: today
