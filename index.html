@@ -162,7 +162,7 @@ window.Quarto = {
       <div>
       <div class="quarto-title-meta-heading">Fecha de publicación</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">28 de septiembre de 2026</p>
+        <p class="date">3 de octubre de 2026</p>
       </div>
     </div>
     
@@ -271,7 +271,7 @@ window.Quarto = {
 
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">knitr.table.format =</span> <span class="st">"html"</span>,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">scipen =</span> <span class="dv">999</span></span>
@@ -290,7 +290,7 @@ body{
 </style>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ipak <span class="ot">&lt;-</span> <span class="cf">function</span>(pkg){</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">options</span>(<span class="at">repos =</span> <span class="fu">c</span>(<span class="at">CRAN=</span><span class="st">"https://cloud.r-project.org"</span>))</span>
@@ -343,9 +343,9 @@ X=\{x_1,x_2,\ldots,x_n\}
 <p>Una tabla de frecuencias puede contener las siguientes columnas:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 23%">
-<col style="width: 26%">
-<col style="width: 50%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -407,7 +407,7 @@ X=\{x_1,x_2,\ldots,x_n\}
 <p>Supongamos que se consulta a 20 ciudadanos sobre el número de trámites realizados durante el último año:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tramites <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">4</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">1</span>,</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span></span>
@@ -450,7 +450,7 @@ F_k=n
 <h2 class="anchored" data-anchor-id="en-r">En R</h2>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>freq <span class="ot">&lt;-</span> <span class="fu">table</span>(tramites)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>freq_abs_acum <span class="ot">&lt;-</span> <span class="fu">cumsum</span>(freq)</span>
@@ -567,7 +567,7 @@ H_k=100\%
 <p>Una forma sencilla de construir una tabla completa es:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>frecuencias <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">table</span>(tramites))</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(frecuencias) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Valor"</span>, <span class="st">"fi"</span>)</span>
@@ -593,7 +593,7 @@ H_k=100\%
 <p>Para redondear:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>frecuencias<span class="sc">$</span>hi <span class="ot">&lt;-</span> <span class="fu">round</span>(frecuencias<span class="sc">$</span>hi, <span class="dv">4</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>frecuencias<span class="sc">$</span>Hi <span class="ot">&lt;-</span> <span class="fu">round</span>(frecuencias<span class="sc">$</span>Hi, <span class="dv">4</span>)</span>
@@ -621,7 +621,7 @@ H_k=100\%
 <p>Supongamos una encuesta realizada a 30 ciudadanos sobre el nivel de satisfacción con un servicio público:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>satisfaccion <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Alta"</span>,<span class="st">"Media"</span>,<span class="st">"Baja"</span>,<span class="st">"Alta"</span>,<span class="st">"Media"</span>,</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"Alta"</span>,<span class="st">"Baja"</span>,<span class="st">"Media"</span>,<span class="st">"Alta"</span>,<span class="st">"Alta"</span>,</span>
@@ -642,7 +642,7 @@ H_k=100\%
 <p>La tabla puede complementarse con porcentajes:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(<span class="fu">table</span>(satisfaccion))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -654,7 +654,7 @@ H_k=100\%
 <p>Y expresarse en porcentaje:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">prop.table</span>(<span class="fu">table</span>(satisfaccion)) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -706,7 +706,7 @@ H_k=100\%
 <h2 class="anchored" data-anchor-id="gráfico-de-barras">Gráfico de barras</h2>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
@@ -787,7 +787,7 @@ R=X_{\max}-X_{\min}
 <p>Supongamos que se dispone de los ingresos mensuales de 40 usuarios, expresados en millones de pesos:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>ingresos <span class="ot">&lt;-</span> <span class="fu">round</span>(</span>
@@ -806,7 +806,7 @@ R=X_{\max}-X_{\min}
 <p>Podemos construir intervalos mediante <code>cut()</code>:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>intervalos <span class="ot">&lt;-</span> <span class="fu">cut</span>(</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  ingresos,</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>),</span>
@@ -827,7 +827,7 @@ R=X_{\max}-X_{\min}
 <p>Para representar una variable cuantitativa continua:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(ingresos),</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(<span class="at">x =</span> ingresos)</span>
@@ -988,7 +988,7 @@ h_{i|j}=
 <p>Consideremos una encuesta realizada a 100 ciudadanos:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>datos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Modalidad =</span> <span class="fu">c</span>(</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Presencial"</span>,<span class="st">"Presencial"</span>,<span class="st">"Presencial"</span>,</span>
@@ -1019,7 +1019,7 @@ h_{i|j}=
 <p>Para obtener una tabla de contingencia:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>tabla <span class="ot">&lt;-</span> <span class="fu">xtabs</span>(</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  Frecuencia <span class="sc">~</span> Modalidad <span class="sc">+</span> Satisfaccion,</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> datos</span>
@@ -1065,7 +1065,7 @@ Modalidad    Alta Baja Media
 <p>Podemos obtener los totales de filas y columnas mediante:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">addmargins</span>(tabla)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -1079,7 +1079,7 @@ Modalidad    Alta Baja Media Sum
 <p>También:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">margin.table</span>(tabla, <span class="dv">1</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -1092,7 +1092,7 @@ Presencial    Virtual
 <p>Mientras:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">margin.table</span>(tabla, <span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -1108,7 +1108,7 @@ Presencial    Virtual
 <p>Para obtener las frecuencias relativas conjuntas:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(tabla)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -1121,7 +1121,7 @@ Modalidad    Alta Baja Media
 <p>Para obtener porcentajes:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">prop.table</span>(tabla) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -1137,7 +1137,7 @@ Modalidad    Alta Baja Media
 <p>Para estudiar la distribución de la satisfacción dentro de cada modalidad:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(tabla, <span class="dv">1</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -1150,7 +1150,7 @@ Modalidad    Alta Baja Media
 <p>En porcentaje:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">prop.table</span>(tabla, <span class="dv">1</span>) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -1167,7 +1167,7 @@ Modalidad    Alta Baja Media
 <p>Para estudiar la distribución de la modalidad dentro de cada nivel de satisfacción:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">prop.table</span>(tabla, <span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -1180,7 +1180,7 @@ Modalidad         Alta      Baja     Media
 <p>En porcentaje:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fu">prop.table</span>(tabla, <span class="dv">2</span>) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -1236,7 +1236,7 @@ Modalidad     Alta  Baja Media
 <p>Una tabla de contingencia puede representarse mediante un gráfico de barras.</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>datos_grafico <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
@@ -1286,7 +1286,7 @@ Modalidad     Alta  Baja Media
 <p>También puede utilizarse:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
 <span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  datos_grafico,</span>
 <span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
@@ -1317,7 +1317,7 @@ Modalidad     Alta  Baja Media
 <p>Para comparar estructuras porcentuales entre grupos:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(</span>
 <span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>  datos_grafico,</span>
 <span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">aes</span>(</span>
@@ -1367,7 +1367,7 @@ Modalidad     Alta  Baja Media
 <p>A partir de una tabla de contingencia:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">chisq.test</span>(tabla)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -1408,9 +1408,9 @@ p\geq\alpha
 <h1>Diferencia entre distribución unidimensional y bidimensional</h1>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 27%">
-<col style="width: 27%">
-<col style="width: 44%">
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -1535,7 +1535,7 @@ p\geq\alpha
 <p>En R podemos crear una función reutilizable:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>tabla_frecuencias <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
 <span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>  </span>
 <span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>  fi <span class="ot">&lt;-</span> <span class="fu">table</span>(x)</span>
@@ -1560,7 +1560,7 @@ p\geq\alpha
 <p>Aplicación:</p>
 <div class="cell" data-layout-align="center">
 <details class="code-fold">
-<summary></summary>
+<summary>LOOK</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">tabla_frecuencias</span>(satisfaccion)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
